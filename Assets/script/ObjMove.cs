@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class ObjMove : MonoBehaviour
 {
-    private float speed = 1.0f; // ˆÚ“®‘¬“x
-
+    private float speed = 1.0f;
     private Vector3 thisGmaeObj;
 
     // Start is called before the first frame update
@@ -17,8 +16,9 @@ public class ObjMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //YŽ²‚Ì‚ÝˆÚ“®
         float moveY = speed * Time.deltaTime;
         Vector3 newPosition = transform.position - new Vector3(0, moveY, 0);
-        transform.position = newPosition; // YŽ²•ûŒü‚Ì‚ÝˆÚ“®
+        transform.position = newPosition;
     }
 }

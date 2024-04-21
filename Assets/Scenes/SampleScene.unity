@@ -325,7 +325,7 @@ Transform:
   m_GameObject: {fileID: 1522473199}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.014261134, y: 5.07, z: -0.112363055}
+  m_LocalPosition: {x: -0.014261134, y: 5.07, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -347,8 +347,6 @@ MonoBehaviour:
   - {fileID: 6977949651493869647, guid: 58a1822ddd0fa6c4680a6052cccc1bad, type: 3}
   - {fileID: 6071446882811598259, guid: 0ec978f59f878b0449a1b6ac11e8c1ce, type: 3}
   - {fileID: 1304126894062044213, guid: 3edf5ad0565d1614194b064847b08b8d, type: 3}
-  _timer: 3
-  _spawnPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &1527413138
 GameObject:
   m_ObjectHideFlags: 0
@@ -358,9 +356,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1527413142}
-  - component: {fileID: 1527413141}
-  - component: {fileID: 1527413140}
   - component: {fileID: 1527413139}
+  - component: {fileID: 1527413144}
+  - component: {fileID: 1527413143}
   m_Layer: 0
   m_Name: OutBar
   m_TagString: Out
@@ -380,7 +378,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f54163ebc8646ce4eb519e084ed6a162, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!61 &1527413140
+--- !u!4 &1527413142
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1527413138}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -5.5, z: 0}
+  m_LocalScale: {x: 7.2625, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1527413143
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -425,7 +438,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!50 &1527413141
+--- !u!50 &1527413144
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -433,7 +446,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1527413138}
-  m_BodyType: 2
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -452,21 +465,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!4 &1527413142
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1527413138}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -5.5, z: -0.05976012}
-  m_LocalScale: {x: 7.2625, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
