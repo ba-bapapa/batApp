@@ -18,9 +18,10 @@ public class SpawnBlock : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log("aa");
         _timer -= Time.deltaTime;
 
-        if(_timer <= 0)
+        if (_timer <= 0)
         {
             //ƒ‰ƒ“ƒ_ƒ€‚ÅÝ’è
             int rnd = Random.Range(0, spawnObj.Length);
