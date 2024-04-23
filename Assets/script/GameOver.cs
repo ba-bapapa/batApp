@@ -18,11 +18,7 @@ public class GameOver : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-       if(collision.gameObject.tag == "Player")
-        {
-            return;
-        }
-
+       if(collision.gameObject.tag == "Player") return;
         Destroy(collision.gameObject, 2.0f);
     }
 }
