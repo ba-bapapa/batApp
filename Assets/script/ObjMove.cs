@@ -5,12 +5,10 @@ using UnityEngine;
 public class ObjMove : MonoBehaviour
 {
     private float speed = 1.0f;
-    private Vector3 thisGmaeObj;
 
     // Start is called before the first frame update
     void Start()
     {
-        thisGmaeObj = this.gameObject.transform.localPosition;
     }
 
     // Update is called once per frame
