@@ -4,17 +4,17 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Out
+  - Bar
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
-  - 
-  - 
-  - 
+  - OutBar
+  - SideBar
+  - Obj
   - 
   - 
   - 

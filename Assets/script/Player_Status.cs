@@ -32,7 +32,7 @@ public class Player_Status : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(_timer <= 0)
+        if(_timer <= 0 && collision.gameObject.tag != "Bar")
         {
             this.gameObject.transform.parent = collision.gameObject.transform;
         }

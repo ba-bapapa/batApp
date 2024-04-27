@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2881239615434973278}
   - component: {fileID: 5446796054795878666}
   - component: {fileID: 525675910161888674}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Hexagon Flat-Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
