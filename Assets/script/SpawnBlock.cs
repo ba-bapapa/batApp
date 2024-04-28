@@ -51,13 +51,10 @@ public class SpawnBlock : MonoBehaviour
         else if(SpawnNumber == 1)
         {
             int rndOccurrence = RandomOrFixedSpawn(spawnCount);
+            if (rndOccurrence != 0) return;
 
-            //ランダム抽選が起きなければオブジェクト作成
-            if(rndOccurrence == 0)
-            {
-                bornObj = Instantiate(spawnObj[rndSpwanObj], spawnPosition, Quaternion.identity);
-                bornObj.tag = "FixedObj";
-            }
+            bornObj = Instantiate(spawnObj[rndSpwanObj], spawnPosition, Quaternion.identity);
+            bornObj.tag = "FixedObj";
         }
         //ランダムスポーン
         else if(SpawnNumber == 2)
@@ -67,8 +64,6 @@ public class SpawnBlock : MonoBehaviour
             bornObj = Instantiate(spawnObj[rndSpwanObj], spawnPosition, Quaternion.identity);
             bornObj.tag = "RandomObj";
         }
-
-        timer = setTimer;
     }
 
     private int RandomOrFixedSpawn(int Count)
@@ -101,6 +96,7 @@ public class SpawnBlock : MonoBehaviour
             SpawnObj(2);
         }
 
+        timer = setTimer;
         if (Count == 4) spawnCount = 0;
 
         return rndSpwanObj;
