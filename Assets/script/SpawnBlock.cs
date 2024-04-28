@@ -7,6 +7,7 @@ public class SpawnBlock : MonoBehaviour
     public GameObject[] spawnObj;
     public GameObject[] startAnker;
 
+    private GameObject bornObj;
     private const float setTimer = 3.0f;
     private float timer = setTimer;
     private Vector3 spawnPosition;
@@ -33,18 +34,21 @@ public class SpawnBlock : MonoBehaviour
     {
         //ÉâÉìÉ_ÉÄÇ≈ê›íË
         int rndSpwanObj = Random.Range(0, spawnObj.Length);
-        float positionX = Random.Range(-2.0f, 2.0f);
+        float positionX = Random.Range(-2.0f, 2.1f);
         spawnPosition.x = positionX;
 
         if(SpawnNumber == 0)
         {
-            Instantiate(spawnObj[rndSpwanObj], startAnker[1].transform.position, Quaternion.identity);
+            bornObj = Instantiate(spawnObj[rndSpwanObj], startAnker[1].transform.position, Quaternion.identity);
+            bornObj.tag = "FixedObj";
             rndSpwanObj = Random.Range(0, spawnObj.Length);
-            Instantiate(spawnObj[rndSpwanObj], startAnker[2].transform.position, Quaternion.identity);
+            bornObj = Instantiate(spawnObj[rndSpwanObj], startAnker[2].transform.position, Quaternion.identity);
+            bornObj.tag = "FixedObj";
         }
         else if(SpawnNumber == 1)
         {
-            Instantiate(spawnObj[rndSpwanObj], spawnPosition, Quaternion.identity);
+            bornObj = Instantiate(spawnObj[rndSpwanObj], spawnPosition, Quaternion.identity);
+            bornObj.tag = "FixedObj";
         }
 
         timer = setTimer;

@@ -6,7 +6,7 @@ public class ObjMove : MonoBehaviour
 {
     private float yMoveSpeed = 1.0f;
     private float rotateSpeed = 0.11f; //‰ñ“]‘¬“x‚Í{‚P‚Åİ’è‚·‚é
-    private float lowestRotateSpeed = 0.01f;
+    private float lowestRotateSpeed = 0.05f;
     private float rndRotateSpeed;
 
     // Start is called before the first frame update
