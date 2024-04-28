@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class GameOver : MonoBehaviour
+
+public class Title : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -16,13 +17,13 @@ public class GameOver : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void LoadStart()
     {
-        if (collision.gameObject.tag == "Player")
-        {
-            SceneManager.LoadScene("GameOver");
-            return;
-        }
-        Destroy(collision.gameObject, 2.0f);
+        SceneManager.LoadScene("MainScene");
+    }
+
+    public void LoadTitle()
+    {
+        SceneManager.LoadScene("Title");
     }
 }
