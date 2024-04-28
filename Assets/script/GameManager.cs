@@ -5,14 +5,14 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject timeUI;
+    public GameObject timeUi;
     private TextMeshProUGUI timeText;
     private float elapsed_time = 0.0f;
 
     // Start is called before the first frame update
     void Start()
     {
-        timeText = timeUI.GetComponent<TextMeshProUGUI>();
+        timeText = timeUi.GetComponent<TextMeshProUGUI>();
     }
 
     // Update is called once per frame

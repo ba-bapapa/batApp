@@ -7,22 +7,23 @@ public class SpawnBlock : MonoBehaviour
     public GameObject[] spawnObj;
     public GameObject[] startAnker;
 
-    private float _timer = 3.0f;
-    private Vector3 _spawnPosition;
+    private const float setTimer = 3.0f;
+    private float timer = setTimer;
+    private Vector3 spawnPosition;
 
     // Start is called before the first frame update
     void Start()
     {
         SpawnObj(0);
-        _spawnPosition = this.gameObject.transform.localPosition;
+        spawnPosition = this.gameObject.transform.localPosition;
     }
 
     // Update is called once per frame
     void Update()
     {
-        _timer -= Time.deltaTime;
+        timer -= Time.deltaTime;
 
-        if (_timer <= 0)
+        if (timer <= 0)
         {
             SpawnObj(1);
         }
@@ -31,21 +32,21 @@ public class SpawnBlock : MonoBehaviour
     private void SpawnObj(int SpawnNumber)
     {
         //ƒ‰ƒ“ƒ_ƒ€‚ÅÝ’è
-        int rnd = Random.Range(0, spawnObj.Length);
+        int rndSpwanObj = Random.Range(0, spawnObj.Length);
         float positionX = Random.Range(-2.0f, 2.0f);
-        _spawnPosition.x = positionX;
+        spawnPosition.x = positionX;
 
         if(SpawnNumber == 0)
         {
-            Instantiate(spawnObj[rnd], startAnker[1].transform.position, Quaternion.identity);
-            rnd = Random.Range(0, spawnObj.Length);
-            Instantiate(spawnObj[rnd], startAnker[2].transform.position, Quaternion.identity);
+            Instantiate(spawnObj[rndSpwanObj], startAnker[1].transform.position, Quaternion.identity);
+            rndSpwanObj = Random.Range(0, spawnObj.Length);
+            Instantiate(spawnObj[rndSpwanObj], startAnker[2].transform.position, Quaternion.identity);
         }
         else if(SpawnNumber == 1)
         {
-            Instantiate(spawnObj[rnd], _spawnPosition, Quaternion.identity);
+            Instantiate(spawnObj[rndSpwanObj], spawnPosition, Quaternion.identity);
         }
-       
-        _timer = 3.0f;
+
+        timer = setTimer;
     }
 }
