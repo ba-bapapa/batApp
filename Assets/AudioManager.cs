@@ -3,31 +3,39 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 
-public class AudioManager : MonoBehaviour
+namespace audio
 {
-    public static AudioManager instance;
-    [SerializeField] private AudioMixer audioMixer;
-
-    private void Awake()
+    public class AudioManager : MonoBehaviour
     {
-        if (instance == null)
+        public static AudioManager instance;
+        [SerializeField] private AudioMixer audioMixer;
+
+        private void Awake()
         {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
+            if (instance == null)
+            {
+                instance = this;
+                DontDestroyOnLoad(gameObject);
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
         }
-        else
+
+        public void SetMasterVolume(float volume)
         {
-            Destroy(gameObject);
+            audioMixer.SetFloat("Master", volume);
         }
-    }
 
-    public void SetBgm(float volume)
-    {
-        audioMixer.SetFloat("BGM", volume);
-    }
+        public void SetBgmVolume(float volume)
+        {
+            audioMixer.SetFloat("BGM", volume);
+        }
 
-    public void SetSe(float volume)
-    {
-        audioMixer.SetFloat("Se", volume);
+        public void SetSeVolume(float volume)
+        {
+            audioMixer.SetFloat("SE", volume);
+        }
     }
 }
