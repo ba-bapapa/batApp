@@ -15,6 +15,9 @@ public class SettingPopup : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        master.value = PlayerPrefs.GetFloat("MasterVolume");
+        bgm.value = PlayerPrefs.GetFloat("BgmVolume");
+        se.value = PlayerPrefs.GetFloat("SeVolume");
         closeButton.onClick.AddListener(OnCloseButton);
         master.onValueChanged.AddListener(MasterVolumeChange);
         bgm.onValueChanged.AddListener(BgmVolumeChange);
@@ -30,20 +33,24 @@ public class SettingPopup : MonoBehaviour
     private void MasterVolumeChange(float value)
     {
         AudioManager.instance.SetMasterVolume(value);
+        PlayerPrefs.SetFloat("MasterVolume", value);
     }
 
     private void BgmVolumeChange(float value)
     {
         AudioManager.instance.SetBgmVolume(value);
+        PlayerPrefs.SetFloat("BgmVolume", value);
     }
 
     private void SeVolumeChange(float value)
     {
         AudioManager.instance.SetSeVolume(value);
+        PlayerPrefs.SetFloat("SeVolume", value);
     }
 
     private void OnCloseButton()
     {
+        PlayerPrefs.Save();
         Destroy(this.gameObject);
     }
 }
