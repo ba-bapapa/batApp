@@ -29,23 +29,17 @@ public class SettingPopup : MonoBehaviour
 
     private void MasterVolumeChange(float value)
     {
-        float decibel = 20f * Mathf.Log10(value);
-        decibel = Mathf.Clamp(decibel, -80f, 0f);
-        AudioManager.instance.SetMasterVolume(decibel);
+        AudioManager.instance.SetMasterVolume(value);
     }
 
     private void BgmVolumeChange(float value)
     {
-        float decibel = 20f * Mathf.Log10(value);
-        decibel = Mathf.Clamp(decibel, -80f, 0f);
-        AudioManager.instance.SetBgmVolume(decibel);
+        AudioManager.instance.SetBgmVolume(value);
     }
 
     private void SeVolumeChange(float value)
     {
-        float decibel = 20f * Mathf.Log10(value);
-        decibel = Mathf.Clamp(decibel, -80f, 0f);
-        AudioManager.instance.SetSeVolume(decibel);
+        AudioManager.instance.SetSeVolume(value);
     }
 
     private void OnCloseButton()
