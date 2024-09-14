@@ -6,7 +6,7 @@ using UnityEngine;
 public class GameUIManager : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI timer;
-    private float elapsed_time = 0.0f;
+    public float elapsed_time = 0.0f;
 
     void Start()
     {
