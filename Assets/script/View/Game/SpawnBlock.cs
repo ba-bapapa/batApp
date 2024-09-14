@@ -12,8 +12,7 @@ public class SpawnBlock : MonoBehaviour
     public GameObject[] startAnker;
     private GameObject bornObj;
 
-    private const float setSpawnTimer = 3.0f;
-    private float spawnTimer = setSpawnTimer;
+    private float spawnTimer;
     private float objParmeterTimer;
     private Vector3 spawnPosition;
     private int spawnCount = 0;
@@ -22,6 +21,7 @@ public class SpawnBlock : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        spawnTimer = gameManager.spawnTimer;
         SpawnObj(0);
         spawnPosition = this.gameObject.transform.localPosition;
         objParmeterTimer = gameManager.startObjParameterTime;
@@ -113,7 +113,7 @@ public class SpawnBlock : MonoBehaviour
             SpawnObj(2);
         }
 
-        spawnTimer = setSpawnTimer;
+        spawnTimer = gameManager.spawnTimer;
         if (Count == 4) spawnCount = 0;
 
         return rndSpwanObj;
