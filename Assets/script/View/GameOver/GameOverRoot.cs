@@ -6,15 +6,15 @@ using UnityEngine.UI;
 
 public class GameOverRoot: MonoBehaviour
 {
-    [SerializeField] private Button titleButton;
+    [SerializeField] private Button resultButton;
 
     void Start()
     {
-        titleButton.onClick.AddListener(LoadTitle);
+        resultButton.onClick.AddListener(LoadResult);
     }
 
-    public void LoadTitle()
+    public void LoadResult()
     {
-        SceneManager.LoadScene("Title");
+        SceneManager.LoadScene("Result");
     }
 }

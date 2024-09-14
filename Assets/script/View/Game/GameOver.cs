@@ -38,6 +38,10 @@ public class GameOver : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
+            //経過時間の保存
+            PlayerPrefs.SetFloat("ScoreTime", uiManager.elapsed_time);
+
+            //シーンをゲームオーバーに
             SceneManager.LoadScene("GameOver");
             return;
         }
