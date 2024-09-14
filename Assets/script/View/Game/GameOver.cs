@@ -4,23 +4,22 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class GameOver : MonoBehaviour
 {
-    [Header("バーが上がりだす開始秒数")]
-    [SerializeField] private float changeStart;
-
-    [Header("バーがどこまで上がるか")]
-    [SerializeField] private float changeEnd;
-
-    [Header("バーがchangeEndまでの到達スピード")]
-    [SerializeField] private float changeSpeed;
-
-    [Space(10)]
+    [Header("マネージャー")]
     [SerializeField] private GameUIManager uiManager;
+    [SerializeField] private GameManager gameManager;
+
+    private float changeStart;
+    private float changeEnd;
+    private float changeSpeed;
     private float startY;        // 初期Y位置
     private float elapsedTime;   // changeStartを超えた経過時間
 
     // Start is called before the first frame update
     void Start()
     {
+        changeStart = gameManager.changeStart;
+        changeEnd = gameManager.changeEnd;
+        changeSpeed = gameManager.changeSpeed;
         startY = transform.localScale.y;
         elapsedTime = 0f;
     }
