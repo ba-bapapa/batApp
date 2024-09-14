@@ -962,9 +962,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1007904481}
     m_Modifications:
+    - target: {fileID: 838935826436965611, guid: 58a1822ddd0fa6c4680a6052cccc1bad, type: 3}
+      propertyPath: rotateSpeed
+      value: 0.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 838935826436965611, guid: 58a1822ddd0fa6c4680a6052cccc1bad, type: 3}
+      propertyPath: fallingSpeed
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7228083981563205567, guid: 58a1822ddd0fa6c4680a6052cccc1bad, type: 3}
       propertyPath: m_Name
-      value: Square
+      value: StartObj
       objectReference: {fileID: 0}
     - target: {fileID: 7228083981563205567, guid: 58a1822ddd0fa6c4680a6052cccc1bad, type: 3}
       propertyPath: m_TagString
@@ -1282,6 +1290,11 @@ MonoBehaviour:
   changeStart: 3
   changeEnd: 2
   changeSpeed: 10
+  fallingBaseSpeed: 1
+  rotateBaseSpeed: 0.11
+  startObjParameterTime: 5
+  fallingSpeed: 2
+  rotateSpeed: 2
 --- !u!1 &1466550444
 GameObject:
   m_ObjectHideFlags: 0
@@ -1487,6 +1500,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3339c9fb62366334d8a2ab3a4ef47a7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 1391083000}
   spawnObj:
   - {fileID: 7228083981563205567, guid: 58a1822ddd0fa6c4680a6052cccc1bad, type: 3}
   - {fileID: 6071446882811598259, guid: 0ec978f59f878b0449a1b6ac11e8c1ce, type: 3}

@@ -13,15 +13,18 @@ public class GameManager : MonoBehaviour
     [Header("バーがchangeEndまでの到達スピード")]
     public float changeSpeed;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [Header("オブジェクトの基本落下速度")]
+    public float fallingBaseSpeed;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    [Header("オブジェクトの基本回転速度")]
+    public float rotateBaseSpeed;
+
+    [Header("オブジェクトのパラメーターの変化の開始時間")]
+    public float startObjParameterTime;
+
+    [Header("オブジェクトの変化後の落下速度")]
+    public float fallingSpeed;
+
+    [Header("オブジェクトの変化後の回転速度")]
+    public float rotateSpeed;
 }

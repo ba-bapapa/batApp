@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class ObjMove : MonoBehaviour
 {
-    private float yMoveSpeed = 1.0f;
-    private float rotateSpeed = 0.11f; //âÒì]ë¨ìxÇÕÅ{ÇPÇ≈ê›íËÇ∑ÇÈ
+    public float fallingSpeed = 1.0f;
+    public float rotateSpeed = 0.11f;
     private float lowestRotateSpeed = 0.05f;
     private float rndRotateSpeed;
 
@@ -23,7 +23,7 @@ public class ObjMove : MonoBehaviour
         transform.Rotate(new Vector3(0, 0, rndRotateSpeed));
 
         //Yé≤ÇÃÇ›à⁄ìÆ
-        float moveY = yMoveSpeed * Time.deltaTime;
+        float moveY = fallingSpeed * Time.deltaTime;
         Vector3 newPosition = transform.position - new Vector3(0, moveY, 0);
         transform.position = newPosition;
     }
