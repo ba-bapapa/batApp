@@ -1071,7 +1071,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1070142819}
   m_Layer: 0
-  m_Name: Manager
+  m_Name: Managers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1287,9 +1287,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa22f1073613a484e80d650853e773ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  changeStart: 3
-  changeEnd: 2
-  changeSpeed: 10
+  changeStartTime: 3
+  changeEndScale: 2
+  changeTime: 10
   spawnTimer: 3
   fallingBaseSpeed: 1
   rotateBaseSpeed: 0.11

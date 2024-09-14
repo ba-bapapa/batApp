@@ -17,9 +17,9 @@ public class GameOver : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        changeStart = gameManager.changeStart;
-        changeEnd = gameManager.changeEnd;
-        changeSpeed = gameManager.changeSpeed;
+        changeStart = gameManager.changeStartTime;
+        changeEnd = gameManager.changeEndScale;
+        changeSpeed = gameManager.changeTime;
         startY = transform.localScale.y;
         elapsedTime = 0f;
     }

@@ -6,13 +6,13 @@ public class GameManager : MonoBehaviour
 {
     [Header("アウトバー関連")]
     [Header("バーが上がりだす開始秒数")]
-    public float changeStart;
+    public float changeStartTime;
 
     [Header("バーの到達スケール")]
-    public float changeEnd;
+    public float changeEndScale;
 
-    [Header("バーがchangeEndまでの到達スピード")]
-    public float changeSpeed;
+    [Header("バーの到達スケールまでの到達秒数")]
+    public float changeTime;
 
     [Space(30)]
 
@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour
     [Header("オブジェクトの基本回転速度")]
     public float rotateBaseSpeed;
 
-    [Header("オブジェクトのパラメーターの変化の開始時間")]
+    [Header("オブジェクトのパラメーターの変化の開始秒数")]
     public float startObjParameterTime;
 
     [Header("オブジェクトの変化後の増加落下速度")]
